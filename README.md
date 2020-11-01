@@ -43,9 +43,11 @@ sudo apt install -y git
 
 make sure you're back in home ~
 
-```
-git clone https://github.com/chrisbmatthews/wordpress-docker-compose.git
-cd wordpress-docker-compose/
+<!-- git clone https://github.com/chrisbmatthews/wordpress-docker-compose.git -->
+
+```bash
+git clone https://github.com/TurtleWolf/wordpressMathews
+cd wordpressMathewsca/
 ```
 
 ### **11:45 also edit passwords at this point**
@@ -55,16 +57,9 @@ nano .env
     IP=127.0.0.1
     DB_ROOT_PASSWORD=alphaa
     DB_NAME=charlie
-chmod 600 .env
-sudo nano docker-compose.yml
-
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_NAME: "${DB_NAME}"
-      WORDPRESS_DB_USER: root
-      WORDPRESS_DB_PASSWORD: "${DB_ROOT_PASSWORD}"
-
-chmod 600 docker-compose.yml
+chmod 400 .env
+chmod 400 docker-compose.yml
+# BACKUP server SNAPSHOT
 docker-compose up -d
 docker container ls
 ```
@@ -78,7 +73,7 @@ docker container ls
 dig scripthammer.com
 ```
 
-## #4 NGINX Reverse Proxy
+## **#4 NGINX Reverse Proxy**
 
 ### **:50** setting, general 2 URLs
 
