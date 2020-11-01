@@ -47,7 +47,7 @@ make sure you're back in home ~
 
 ```bash
 git clone https://github.com/TurtleWolf/wordpressMathews
-cd wordpressMathewsca/
+cd wordpressMathews/
 ```
 
 ### **11:45 also edit passwords at this point**
@@ -101,23 +101,23 @@ sudo nano www.ScriptHammer.com.conf
 
 ```conf
 server {
-root /var/www/html;
-listen 80;
-listen [::]:80;
-server_name scripthammer.com www.scripthammer.com;
-location / {
-      proxy_pass http://127.0.0.1:8080;
-      proxy_redirect off;
-      proxy_set_header Host $host;
-      proxy_set_header   X-Real-IP $remote_addr;
-      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-      proxy_set_header   X-Forwarded-Host $server_name;
-      proxy_set_header X-Forwarded-Proto \$scheme;
-  }
-}
+    root /var/www/html;
+    listen 80;
+    listen [::]:80;
+    server_name scripthammer.com www.scripthammer.com;
+    location / {
+        proxy_pass http://127.0.0.1:8080;
+        proxy_redirect off;
+        proxy_set_header Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Host $server_name;
+        proxy_set_header X-Forwarded-Proto \$scheme;
+        }
+    }
 ```
 
-### (#5 10:54)
+### (#4 10:54)
 
 ```bash
 cd ..
@@ -145,13 +145,15 @@ sudo apt install software-properties-common && sudo apt update
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
+sudo apt install -y python3-certbot-nginx
 ```
 
 <!-- choose location   -->
 
 ```bash
-cd ..
-cd sites-available/
+# cd ..
+# cd sites-available/
+cd /etc/nginx/sites-available
 sudo certbot --nginx -d scripthammer.com -d www.scripthammer.com
 ```
 
@@ -210,4 +212,54 @@ sudo crontab -e
 
 ```bash
 45 2 * * * certbot renew > /tmp/certbotrenew.log
+```
+
+```bash
+    1  history
+    2  docker ps
+    3  docker-compose up -d
+    4  ll
+    5  cd wordpressMathews/
+    6  history
+    7  docker-compose up -d
+    8  docker container ls
+    9  docker ps
+   10  docker container ls
+   11  clear
+   12  cd /etc/nginx
+   13  ll
+   14  cd sites-available
+   15  ll
+   16  nano default
+   17  sudo nano www.ScriptHammer.com.conf
+   18  ll
+   19  sudo nano www.ScriptHammer.com.conf
+   20  nano default
+   21  sudo nano www.ScriptHammer.com.conf
+   22  cd ..
+   23  cd sites-enabled
+   24  ll
+   25  sudo ln -s /etc/nginx/sites-available/www.ScriptHammer.com.conf www.ScriptHammer.com.conf
+   26  cat www.ScriptHammer.com.conf
+   27  sudo service nginx restart
+   28  cd
+   29  ll
+   30  docker-compose down -v
+   31  cd wordpressMathews/
+   32  docker-compose down -v
+   33  history
+```
+
+```bash
+   34  sudo apt install software-properties-common && sudo apt update
+   35  sudo add-apt-repository ppa:certbot/certbot
+   36  sudo apt update
+   37  sudo apt install -y python-certbot-nginx
+   38  sudo apt install -y python3-certbot-nginx
+   41  cd /etc/nginx/sites-available
+   42  sudo certbot --nginx -d scripthammer.com -d www.scripthammer.com
+   44  cat www.ScriptHammer.com.conf
+   45  sudo service nginx restart
+   49  cd /wordpressMathews
+   50  docker-compose up -d
 ```
