@@ -71,8 +71,8 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
 # sudo apt install -y python3-ce2rtbot-nginx
-sudo certbot --nginx -d pohlnerlandscaping.com -d www.pohlnerlandscaping.com
-# cat www.pohlnerlandscaping.com.conf
+sudo certbot --nginx -d scripthammer.com -d www.scripthammer.com
+# cat www.scripthammer.com.conf
 sudo service nginx restart
 
 cd wordpressMathews
