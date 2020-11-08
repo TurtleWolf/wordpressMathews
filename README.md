@@ -263,3 +263,6 @@ sudo crontab -e
    49  cd /wordpressMathews
    50  docker-compose up -d
 ```
+
+sudo chown -R www-data <path>/wp-content/uploads
+sudo chown -R www-data ~/pohlnerlandscaping/wp-app/wp-content/uploads
