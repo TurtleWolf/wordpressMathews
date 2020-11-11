@@ -56,13 +56,13 @@ sudo docker ps
 
 # 6:3-50 inaccessible
 sudo apt install -y nginx
-sudo nano /etc/nginx/sites-available/www.scripthammer.com.conf
+sudo nano /etc/nginx/sites-available/www.ScriptHammer.com.conf
 # 7:30 private window to dodge cache
 server {
     root /var/www/html;
     listen 80;
     listen [::]:80;
-    server_name scripthammer.com www.scripthammer.com;
+    server_name ScriptHammer.com www.ScriptHammer.com;
     location / {
         proxy_pass http://127.0.0.1:8080;
         proxy_redirect off;
@@ -75,33 +75,33 @@ server {
     }
 # 7:30 private window to dodge cache
 
-cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.cargambler.com.conf
-cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.crudgames.com.conf
-cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.geolarp.com.conf
-cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
-# cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.scripthammer.com.conf
-cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.turtlewolfe.com.conf
+sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.carGambler.com.conf
+sudo cp /etc/nginx/sites-availablsude/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.crudGames.com.conf
+sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.geoLARP.com.conf
+sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
+# sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.ScriptHammer.com.conf
+sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.TurtleWolfe.com.conf
 
-sudo nano /etc/nginx/sites-available/www.cargambler.com.conf
-sudo nano /etc/nginx/sites-available/www.crudgames.com.conf
-sudo nano /etc/nginx/sites-available/www.geolarp.com.conf
-sudo nano /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
-# sudo nano /etc/nginx/sites-available/www.scripthammer.com.conf
-sudo nano /etc/nginx/sites-available/www.turtlewolfe.com.conf
+sudo nano /etc/nginx/sites-available/www.carGambler.com.conf
+sudo nano /etc/nginx/sites-available/www.crudGames.com.conf
+sudo nano /etc/nginx/sites-available/www.geoLARP.com.conf
+sudo nano /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
+# sudo nano /etc/nginx/sites-available/www.ScriptHammer.com.conf
+sudo nano /etc/nginx/sites-available/www.TurtleWolfe.com.conf
 
-    # 8081      server_name cargambler.com www.cargambler.com;
-    # 8082      server_name crudgames.com www.crudgames.com;
-    # 8083      server_name geolarp.com www.geolarp.com;
-    # 8084      server_name pohlnerlandscaping.com www.pohlnerlandscaping.com;
-    # 8080      server_name scripthammer.com www.scripthammer.com;
-    # 8088      server_name turtlewolfe.com www.turtlewolfe.com;
+    # 8081      server_name carGambler.com www.carGambler.com;
+    # 8082      server_name crudGames.com www.crudGames.com;
+    # 8083      server_name geoLARP.com www.geoLARP.com;
+    # 8084      server_name PohlnerLandscaping.com www.PohlnerLandscaping.com;
+    # 8080      server_name ScriptHammer.com www.ScriptHammer.com;
+    # 8088      server_name TurtleWolfe.com www.TurtleWolfe.com;
 
-sudo ln -s /etc/nginx/sites-available/www.cargambler.com.conf /etc/nginx/sites-enabled/www.cargambler.com.conf
-sudo ln -s /etc/nginx/sites-available/www.crudgames.com.conf /etc/nginx/sites-enabled/www.crudgames.com.conf
-sudo ln -s /etc/nginx/sites-available/www.geolarp.com.conf /etc/nginx/sites-enabled/www.geolarp.com.conf
-sudo ln -s /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf /etc/nginx/sites-enabled/www.pohlnerlandscaping.com.conf
-sudo ln -s /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-enabled/www.scripthammer.com.conf
-sudo ln -s /etc/nginx/sites-available/www.turtlewolfe.com.conf /etc/nginx/sites-enabled/www.turtlewolfe.com.conf
+sudo ln -s /etc/nginx/sites-available/www.carGambler.com.conf /etc/nginx/sites-enabled/www.carGambler.com.conf
+sudo ln -s /etc/nginx/sites-available/www.crudGames.com.conf /etc/nginx/sites-enabled/www.crudGames.com.conf
+sudo ln -s /etc/nginx/sites-available/www.geoLARP.com.conf /etc/nginx/sites-enabled/www.geoLARP.com.conf
+sudo ln -s /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf /etc/nginx/sites-enabled/www.PohlnerLandscaping.com.conf
+sudo ln -s /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-enabled/www.ScriptHammer.com.conf
+sudo ln -s /etc/nginx/sites-available/www.TurtleWolfe.com.conf /etc/nginx/sites-enabled/www.TurtleWolfe.com.conf
 
 sudo service nginx restart
 
@@ -112,11 +112,16 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
 # sudo apt install -y python3-ce2rtbot-nginx
-sudo certbot --nginx -d scripthammer.com -d www.scripthammer.com
-# cat www.scripthammer.com.conf
+sudo certbot --nginx -d ScriptHammer.com -d www.ScriptHammer.com
+# cat www.ScriptHammer.com.conf
+sudo certbot --nginx -d carGambler.com -d www.carGambler.com
+sudo certbot --nginx -d crudGames.com -d www.crudGames.com
+sudo certbot --nginx -d geoLARP.com -d www.geoLARP.com
+sudo certbot --nginx -d PohlnerLandscaping.com -d www.PohlnerLandscaping.com
+sudo certbot --nginx -d TurtleWolfe.com -d www.TurtleWolfe.com
 sudo service nginx restart
 
-cd wordpressMathews
+cd ScriptHammer
 # docker-compose up -d
 # sudo docker-compose up -d
 cd wp-app
