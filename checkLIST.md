@@ -6,7 +6,7 @@
 # sudo apt upgrade
 
 # video:2
-sudo fallocate -l 4G /swapfile
+# sudo fallocate -l 4G /swapfile
 sudo fallocate -l 8G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
@@ -73,8 +73,36 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
+# 7:30 private window to dodge cache
 
+cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.cargambler.com.conf
+cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.crudgames.com.conf
+cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.geolarp.com.conf
+cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
+# cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.scripthammer.com.conf
+cp /etc/nginx/sites-available/www.scriptyhammer.com.conf /etc/nginx/sites-available/www.turtlewolfe.com.conf
+
+sudo nano /etc/nginx/sites-available/www.cargambler.com.conf
+sudo nano /etc/nginx/sites-available/www.crudgames.com.conf
+sudo nano /etc/nginx/sites-available/www.geolarp.com.conf
+sudo nano /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
+# sudo nano /etc/nginx/sites-available/www.scripthammer.com.conf
+sudo nano /etc/nginx/sites-available/www.turtlewolfe.com.conf
+
+    # 8081      server_name cargambler.com www.cargambler.com;
+    # 8082      server_name crudgames.com www.crudgames.com;
+    # 8083      server_name geolarp.com www.geolarp.com;
+    # 8084      server_name pohlnerlandscaping.com www.pohlnerlandscaping.com;
+    # 8080      server_name scripthammer.com www.scripthammer.com;
+    # 8088      server_name turtlewolfe.com www.turtlewolfe.com;
+
+sudo ln -s /etc/nginx/sites-available/www.cargambler.com.conf /etc/nginx/sites-enabled/www.cargambler.com.conf
+sudo ln -s /etc/nginx/sites-available/www.crudgames.com.conf /etc/nginx/sites-enabled/www.crudgames.com.conf
+sudo ln -s /etc/nginx/sites-available/www.geolarp.com.conf /etc/nginx/sites-enabled/www.geolarp.com.conf
+sudo ln -s /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf /etc/nginx/sites-enabled/www.pohlnerlandscaping.com.conf
 sudo ln -s /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-enabled/www.scripthammer.com.conf
+sudo ln -s /etc/nginx/sites-available/www.turtlewolfe.com.conf /etc/nginx/sites-enabled/www.turtlewolfe.com.conf
+
 sudo service nginx restart
 
 # video:5
