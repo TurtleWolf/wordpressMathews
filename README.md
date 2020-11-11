@@ -8,7 +8,8 @@ apt list --upgradeable
 sudo apt upgrade
 sudo apt update
 top
-sudo fallocate -l 4G /swapfile
+# sudo fallocate -l 4G /swapfile
+sudo fallocate -l 8G /swapfile
 cd /
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile

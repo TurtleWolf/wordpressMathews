@@ -7,6 +7,7 @@
 
 # video:2
 sudo fallocate -l 4G /swapfile
+sudo fallocate -l 8G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
 sudo swapon /swapfile
@@ -23,7 +24,19 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 git clone https://github.com/TurtleWolf/wordpressMathews
-cd wordpressMathews/
+cp -r wordpressMathes carGambler
+# cd carGambler
+cp -r wordpressMathes crudGames
+# cd crudGames
+cp -r wordpressMathes geoLARP
+# cd geoLARP
+cp -r wordpressMathes PohlnerLandscaping
+# cd PohlnerLandscaping
+cp -r wordpressMathes TurtleWolfe
+# cd TurtleWolfe
+cp -r wordpressMathes ScriptHammer
+cd ScriptHammer
+# cd wordpressMathews/
 nano .env
 chmod 400 .env
 sudo docker-compose up -d
