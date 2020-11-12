@@ -76,7 +76,7 @@ server {
 # 7:30 private window to dodge cache
 
 sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.carGambler.com.conf
-sudo cp /etc/nginx/sites-availablsude/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.crudGames.com.conf
+sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.crudGames.com.conf
 sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.geoLARP.com.conf
 sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
 # sudo cp /etc/nginx/sites-available/www.ScriptHammer.com.conf /etc/nginx/sites-available/www.ScriptHammer.com.conf
@@ -111,7 +111,7 @@ sudo apt install software-properties-common && sudo apt update
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
-# sudo apt install -y python3-ce2rtbot-nginx
+# sudo apt install -y python3-certbot-nginx
 sudo certbot --nginx -d ScriptHammer.com -d www.ScriptHammer.com
 # cat www.ScriptHammer.com.conf
 sudo certbot --nginx -d carGambler.com -d www.carGambler.com
@@ -120,7 +120,7 @@ sudo certbot --nginx -d geoLARP.com -d www.geoLARP.com
 sudo certbot --nginx -d PohlnerLandscaping.com -d www.PohlnerLandscaping.com
 sudo certbot --nginx -d TurtleWolfe.com -d www.TurtleWolfe.com
 sudo service nginx restart
-
+sudo systemctl status nginx
 cd ScriptHammer
 # docker-compose up -d
 # sudo docker-compose up -d
