@@ -24,17 +24,17 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 git clone https://github.com/TurtleWolf/wordpressMathews
-cp -r wordpressMathes carGambler
+cp -r wordpressMathews carGambler
 # cd carGambler
-cp -r wordpressMathes crudGames
+cp -r wordpressMathews crudGames
 # cd crudGames
-cp -r wordpressMathes geoLARP
+cp -r wordpressMathews geoLARP
 # cd geoLARP
-cp -r wordpressMathes PohlnerLandscaping
+cp -r wordpressMathews PohlnerLandscaping
 # cd PohlnerLandscaping
-cp -r wordpressMathes TurtleWolfe
+cp -r wordpressMathews TurtleWolfe
 # cd TurtleWolfe
-cp -r wordpressMathes ScriptHammer
+cp -r wordpressMathews ScriptHammer
 cd ScriptHammer
 # cd wordpressMathews/
 nano .env
