@@ -30,11 +30,12 @@ cp -r wordpressMathews crudGames
 # cd crudGames
 cp -r wordpressMathews geoLARP
 # cd geoLARP
-cp -r wordpressMathews pohlnerlandscaping
+cp -r wordpressMathews PohlnerLandscaping
 # cd pohlnerlandscaping
 cp -r wordpressMathews TurtleWolfe
 # cd TurtleWolfe
 cp -r wordpressMathews ScriptHammer
+sudo rm -rf wordpressMathews
 cd ScriptHammer
 # cd wordpressMathews/
 nano .env
@@ -89,12 +90,12 @@ sudo nano /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
 # sudo nano /etc/nginx/sites-available/www.scripthammer.com.conf
 sudo nano /etc/nginx/sites-available/www.TurtleWolfe.com.conf
 
-    # 8081      server_name cargambler.com www.cargambler.com;
-    # 8082      server_name crudgames.com www.crudgames.com;
-    # 8083      server_name geolarp.com www.geolarp.com;
-    # 8084      server_name pohlnerlandscaping.com www.pohlnerlandscaping.com;
-    # 8080      server_name scripthammer.com www.scripthammer.com;
-    # 8088      server_name turtlewolfe.com www.turtlewolfe.com;
+    # 8081   3301   server_name cargambler.com www.cargambler.com;
+    # 8082   3302   server_name crudgames.com www.crudgames.com;
+    # 8083   3303   server_name geolarp.com www.geolarp.com;
+    # 8084   3304   server_name pohlnerlandscaping.com www.pohlnerlandscaping.com;
+    # 8080   3306   server_name scripthammer.com www.scripthammer.com;
+    # 8088   3308   server_name turtlewolfe.com www.turtlewolfe.com;
 
 sudo ln -s /etc/nginx/sites-available/www.carGambler.com.conf /etc/nginx/sites-enabled/www.carGambler.com.conf
 sudo ln -s /etc/nginx/sites-available/www.crudGames.com.conf /etc/nginx/sites-enabled/www.crudGames.com.conf
