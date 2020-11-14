@@ -78,28 +78,28 @@ server {
 sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.carGambler.com.conf
 sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.crudGames.com.conf
 sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.geoLARP.com.conf
-sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
+sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
 # sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.scripthammer.com.conf
 sudo cp /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-available/www.TurtleWolfe.com.conf
 
 sudo nano /etc/nginx/sites-available/www.carGambler.com.conf
 sudo nano /etc/nginx/sites-available/www.crudGames.com.conf
 sudo nano /etc/nginx/sites-available/www.geoLARP.com.conf
-sudo nano /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf
+sudo nano /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf
 # sudo nano /etc/nginx/sites-available/www.scripthammer.com.conf
 sudo nano /etc/nginx/sites-available/www.TurtleWolfe.com.conf
 
-    # 8081      server_name carGambler.com www.carGambler.com;
-    # 8082      server_name crudGames.com www.crudGames.com;
-    # 8083      server_name geoLARP.com www.geoLARP.com;
+    # 8081      server_name cargambler.com www.cargambler.com;
+    # 8082      server_name crudgames.com www.crudgames.com;
+    # 8083      server_name geolarp.com www.geolarp.com;
     # 8084      server_name pohlnerlandscaping.com www.pohlnerlandscaping.com;
     # 8080      server_name scripthammer.com www.scripthammer.com;
-    # 8088      server_name TurtleWolfe.com www.TurtleWolfe.com;
+    # 8088      server_name turtlewolfe.com www.turtlewolfe.com;
 
 sudo ln -s /etc/nginx/sites-available/www.carGambler.com.conf /etc/nginx/sites-enabled/www.carGambler.com.conf
 sudo ln -s /etc/nginx/sites-available/www.crudGames.com.conf /etc/nginx/sites-enabled/www.crudGames.com.conf
 sudo ln -s /etc/nginx/sites-available/www.geoLARP.com.conf /etc/nginx/sites-enabled/www.geoLARP.com.conf
-sudo ln -s /etc/nginx/sites-available/www.pohlnerlandscaping.com.conf /etc/nginx/sites-enabled/www.pohlnerlandscaping.com.conf
+sudo ln -s /etc/nginx/sites-available/www.PohlnerLandscaping.com.conf /etc/nginx/sites-enabled/www.PohlnerLandscaping.com.conf
 sudo ln -s /etc/nginx/sites-available/www.scripthammer.com.conf /etc/nginx/sites-enabled/www.scripthammer.com.conf
 sudo ln -s /etc/nginx/sites-available/www.TurtleWolfe.com.conf /etc/nginx/sites-enabled/www.TurtleWolfe.com.conf
 
@@ -112,12 +112,12 @@ sudo add-apt-repository ppa:certbot/certbot
 sudo apt update
 sudo apt install -y python-certbot-nginx
 # sudo apt install -y python3-certbot-nginx
-sudo certbot --nginx -d scripthammer.com -d www.scripthammer.com
+sudo certbot --nginx -d ScriptHammer.com -d www.ScriptHammer.com
 # cat www.ScriptHammer.com.conf
 sudo certbot --nginx -d carGambler.com -d www.carGambler.com
 sudo certbot --nginx -d crudGames.com -d www.crudGames.com
 sudo certbot --nginx -d geoLARP.com -d www.geoLARP.com
-sudo certbot --nginx -d pohlnerlandscaping.com -d www.pohlnerlandscaping.com
+sudo certbot --nginx -d PohlnerLandscaping.com -d www.PohlnerLandscaping.com
 sudo certbot --nginx -d TurtleWolfe.com -d www.TurtleWolfe.com
 sudo service nginx restart
 sudo systemctl status nginx
