@@ -1,5 +1,4 @@
-# WordPress Free ForEver
-
+# [WordPress Free ForEver](https://youtube.com/playlist?list=PLETG2T1KvnipE7yQx5YJ5voZYUuG3WZQn "I curated a playlist of the episodes that taught me how to set up my blog on Google Cloud Platform free forever, .com URLs are $1 a month.There are several other options, but the free server generally doesn't have enough RAM for what you're asking it to do, so what he does with the SWAP file is a great idea.You may need to brush up on your Vim Commands to edit that part and adding the Encryption Certificates is another huge advantage!Revere Poxy with NGINX and DockerFiles! feel free to send me a message if you get stuck anywhere")
 ## **#2 SwapFile**
 
 ```bash
